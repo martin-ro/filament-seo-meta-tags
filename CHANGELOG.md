@@ -1,7 +1,10 @@
 # Changelog
 
-All notable changes to `:package_name` will be documented in this file.
+All notable changes to `filament-seo-meta-tags` will be documented in this file.
+## 1.0.0 - 2023-07-30
 
-## 1.0.0 - 202X-XX-XX
+- Add Title, Description, Robots and SEO Section.
+
+## 1.0.0 - 2023-07-30
 
 - initial release

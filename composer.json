@@ -1,56 +1,52 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "martin-ro/filament-seo-meta-tags",
+    "description": "SEO Meta Tags for Filament Admin Panel",
     "keywords": [
-        ":vendor_name",
+        "martin-ro",
         "laravel",
-        ":package_slug"
+        "filament-seo-meta-tags"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/martin-ro/filament-seo-meta-tags",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Martin Ro",
+            "email": "mail@martin.ph",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.0",
-        "filament/filament": "^2.0",
+        "php": "^8.2",
+        "filament/filament": "^3.0",
         "spatie/laravel-package-tools": "^1.13.5",
-        "illuminate/contracts": "^9.0|^10.0"
+        "illuminate/contracts": "^9.0|^10.0",
+        "romanzipp/laravel-seo": "^2.5"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
         "nunomaduro/collision": "^6.0",
-        "nunomaduro/larastan": "^2.0.1",
         "orchestra/testbench": "^7.0",
         "pestphp/pest": "^1.21",
         "pestphp/pest-plugin-laravel": "^1.1",
         "pestphp/pest-plugin-livewire": "^1.0",
         "pestphp/pest-plugin-parallel": "^0.3",
-        "phpstan/extension-installer": "^1.1",
-        "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
         "phpunit/phpunit": "^9.5",
         "spatie/laravel-ray": "^1.26"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "MartinRo\\FilamentSeoMetaTags\\": "src",
+            "MartinRo\\FilamentSeoMetaTags\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "MartinRo\\FilamentSeoMetaTags\\Tests\\": "tests"
         }
     },
     "scripts": {
         "pint": "vendor/bin/pint",
         "test:pest": "vendor/bin/pest --parallel",
-        "test:phpstan": "vendor/bin/phpstan analyse",
         "test": [
             "@test:pest",
             "@test:phpstan"
@@ -67,10 +63,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "MartinRo\\FilamentSeoMetaTags\\FilamentSeoMetaTagsServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "FilamentSeoMetaTags": "MartinRo\\FilamentSeoMetaTags\\Facades\\FilamentSeoMetaTags"
             }
         }
     },
