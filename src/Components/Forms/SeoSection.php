@@ -10,12 +10,6 @@ class SeoSection
     {
         return Forms\Components\Section::make($name)
             ->heading($name)
-            ->icon('heroicon-o-code-bracket')
-            ->iconColor(fn ($record) => (
-                $record?->seoMetaTags?->title &&
-                $record?->seoMetaTags?->description &&
-                $record?->seoMetaTags?->robots
-            ) ? 'success' : 'warning')
             ->schema([
 
                 Forms\Components\Group::make([
