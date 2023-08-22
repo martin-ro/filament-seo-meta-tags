@@ -11,10 +11,9 @@ class SeoSection
         return Forms\Components\Section::make($name)
             ->heading($name)
             ->schema([
-
                 Forms\Components\Group::make([
-                    SeoTitle::make()->rows(3),
-                    SeoDescription::make()->rows(6),
+                    SeoTitle::make(),
+                    SeoDescription::make(),
                     SeoRobots::make(),
                 ])->relationship('seoMetaTags'),
 
