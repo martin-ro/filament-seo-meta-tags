@@ -13,7 +13,7 @@ class SeoTitle
         string $name = 'title',
         int $minLength = 50,
         int $maxLength = 70,
-        int $rows = 1,
+        int $rows = 2,
         bool $strict = false
     ): Textarea {
         if ($strict) {

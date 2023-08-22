@@ -13,7 +13,7 @@ class SeoDescription
         string $name = 'description',
         int $minLength = 150,
         int $maxLength = 165,
-        int $rows = 3,
+        int $rows = 4,
         bool $strict = false
     ): Textarea {
         if ($strict) {
