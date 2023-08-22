@@ -34,19 +34,24 @@ class Page extends Model
 SeoTitle::make()
 ```
 
+Configuration:
+```php
+SeoTitle::make(name: 'title', minLength: 50, maxLength: 70, rows: 2, strict: false)
+```
+
 ### Description
 ```php
 SeoDescription::make()
 ```
 
+Configuration:
+```php
+SeoDescription::make(name: 'description', minLength: 150, maxLength: 165, rows: 4, strict: false)
+```
+
 ### Robots
 ```php
 SeoRobots::make()
-```
-
-### Section
-```php
-SeoSection::make()
 ```
 
 ## Optional Middleware
