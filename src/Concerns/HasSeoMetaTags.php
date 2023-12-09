@@ -11,4 +11,11 @@ trait HasSeoMetaTags
     {
         return $this->morphOne(SeoMetaTag::class, 'model');
     }
+
+    public function setSeoMetaTags(): void
+    {
+        seo()->title($this->seoMetaTags?->title);
+        seo()->description($this->seoMetaTags?->description);
+        seo()->meta('robots', $this->seoMetaTags?->robots);
+    }
 }
