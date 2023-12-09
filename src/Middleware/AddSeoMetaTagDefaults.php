@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace MartinRo\FilamentSeoMetaTags\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
