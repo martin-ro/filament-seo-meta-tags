@@ -57,7 +57,7 @@ SeoRobots::make()
 ## Optional Middleware
 
 ```bash
-filament-seo-meta-tags:publish-middleware
+php artisan filament-seo-meta-tags:publish-middleware
 ```
 
 
