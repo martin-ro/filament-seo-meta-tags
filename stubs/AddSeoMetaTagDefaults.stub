@@ -16,7 +16,7 @@ class AddSeoMetaTagDefaults
 
         // can't be overridden
         seo()->meta('theme-color', '#ffffff');
-        seo()->add(Meta::make()->attr('name', 'manifest')->attr('href', asset('site.webmanifest')));
+        seo()->add(Link::make()->rel('manifest')->href(asset('site.webmanifest')));
 
         seo()->canonical(url()->current());
 
