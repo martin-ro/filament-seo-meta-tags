@@ -11,8 +11,8 @@ class SeoDescription
 
     public static function make(
         string $name = 'description',
-        int $minLength = 150,
-        int $maxLength = 165,
+        int $minLength = 145,
+        int $maxLength = 160,
         int $rows = 4,
         bool $strict = false
     ): Textarea {

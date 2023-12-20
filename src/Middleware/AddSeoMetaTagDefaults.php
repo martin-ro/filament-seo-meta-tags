@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace MartinRo\FilamentSeoMetaTags\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
 use romanzipp\Seo\Structs\Link;
-use romanzipp\Seo\Structs\Meta;
 
 class AddSeoMetaTagDefaults
 {

@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
 
             $table->unique(['model_id', 'model_type']);
-            
+
             $table->morphs('model');
 
             $table->string('title')->nullable();

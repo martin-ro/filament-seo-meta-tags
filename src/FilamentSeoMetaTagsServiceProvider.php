@@ -2,7 +2,6 @@
 
 namespace MartinRo\FilamentSeoMetaTags;
 
-use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -14,13 +13,9 @@ class FilamentSeoMetaTagsServiceProvider extends PackageServiceProvider
     {
         $package->name(static::$name)
             ->hasMigration('create_seo_meta_tags_table')
+            ->runsMigrations()
             ->hasCommands([
                 Commands\PublishMiddleware::class,
-            ])
-            ->hasInstallCommand(function (InstallCommand $command) {
-                $command
-                    ->publishMigrations()
-                    ->askToRunMigrations();
-            });
+            ]);
     }
 }

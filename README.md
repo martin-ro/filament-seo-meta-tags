@@ -10,10 +10,10 @@ You can install the package via composer:
 composer require martin-ro/filament-seo-meta-tags
 ```
 
-You can publish and run the migrations with:
+You can run the migrations with:
 
 ```bash
-php artisan filament-seo-meta-tags:install
+php artisan migrate
 ```
 
 ## Preparing your model
@@ -71,23 +71,6 @@ protected $middlewareGroups = [
     ],
 ];
 ```
-
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
-
-## Credits
-
-- [Martin Ro](https://github.com/martin-ro)
-- [All Contributors](../../contributors)
 
 ## License
 
