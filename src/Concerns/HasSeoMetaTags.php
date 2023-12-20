@@ -7,9 +7,13 @@ use MartinRo\FilamentSeoMetaTags\Models\SeoMetaTag;
 
 trait HasSeoMetaTags
 {
-    public function seoMetaTags(): MorphOne
+    protected static function boot()
     {
-        return $this->morphOne(SeoMetaTag::class, 'model');
+        parent::boot();
+
+        static::retrieved(function ($model) {
+            $model->setSeoMetaTags();
+        });
     }
 
     public function setSeoMetaTags(): void
@@ -17,5 +21,10 @@ trait HasSeoMetaTags
         seo()->title($this->seoMetaTags?->title);
         seo()->description($this->seoMetaTags?->description);
         seo()->meta('robots', $this->seoMetaTags?->robots);
+    }
+
+    public function seoMetaTags(): MorphOne
+    {
+        return $this->morphOne(SeoMetaTag::class, 'model');
     }
 }
