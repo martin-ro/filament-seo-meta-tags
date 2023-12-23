@@ -7,15 +7,6 @@ use MartinRo\FilamentSeoMetaTags\Models\SeoMetaTag;
 
 trait HasSeoMetaTags
 {
-    protected static function boot()
-    {
-        parent::boot();
-
-        static::retrieved(function ($model) {
-            $model->setSeoMetaTags();
-        });
-    }
-
     public function setSeoMetaTags(): void
     {
         seo()->title($this->seoMetaTags?->title);
