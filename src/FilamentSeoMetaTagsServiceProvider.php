@@ -14,6 +14,7 @@ class FilamentSeoMetaTagsServiceProvider extends PackageServiceProvider
         $package->name(static::$name)
             ->hasMigration('create_seo_meta_tags_table')
             ->runsMigrations()
+            ->hasConfigFile()
             ->hasCommands([
                 Commands\PublishMiddleware::class,
             ]);

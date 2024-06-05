@@ -16,6 +16,6 @@ trait HasSeoMetaTags
 
     public function seoMetaTags(): MorphOne
     {
-        return $this->morphOne(SeoMetaTag::class, 'model');
+        return $this->morphOne(config('filament-seo-meta-tags.model', SeoMetaTag::class), 'model');
     }
 }

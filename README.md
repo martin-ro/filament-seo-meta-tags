@@ -60,7 +60,6 @@ SeoRobots::make()
 php artisan filament-seo-meta-tags:publish-middleware
 ```
 
-
 In your `app/Http/Kernel.php` file, add the middleware to the `web` group:
 
 ```php
@@ -70,6 +69,12 @@ protected $middlewareGroups = [
        \App\Http\Middleware\AddSeoMetaTagDefaults::class,
     ],
 ];
+```
+
+## Publishing the configuration
+
+```bash
+php artisan vendor:publish --tag=filament-seo-meta-tags-config
 ```
 
 ## License
